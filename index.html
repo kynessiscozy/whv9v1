@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-<title>斗罗大陆 · 武魂觉醒</title>
+<title>武魂模拟器</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
 :root{
@@ -876,7 +876,7 @@ canvas#C{position:fixed;inset:0;z-index:0;pointer-events:none}
 
   <!-- ===== HUNT/TRIAL PAGE ===== -->
   <div class="page" id="page-hunt">
-    <div class="sh"><div class="st">试炼 · 狩猎</div><span style="font-size:10px;color:var(--dim)">次数: <span id="hunt-cnt" style="color:var(--gl);font-weight:700">0</span></span></div>
+    <div class="sh"><div class="st">试炼</div><span style="font-size:10px;color:var(--dim)">次数: <span id="hunt-cnt" style="color:var(--gl);font-weight:700">0</span></span></div>
 
     <!-- Compact hunt zones grid -->
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px">
@@ -956,7 +956,6 @@ canvas#C{position:fixed;inset:0;z-index:0;pointer-events:none}
         <!-- Pool 0: 普通 -->
         <div class="lot-slide ls-0">
           <canvas class="lot-geo-cvs" id="lgeo-0"></canvas>
-          <div class="lot-ltd">🔥 限时 稀有×2</div>
           <div class="lot-inner">
             <div class="lot-top">
               <div>
@@ -1149,7 +1148,6 @@ canvas#C{position:fixed;inset:0;z-index:0;pointer-events:none}
           <div class="sb-desc">每达成条件即可领取顶级星运券，次数不设上限</div>
         </div>
         <div class="sb-right">
-          <div class="sb-ico">🏆</div>
           <div class="sb-cnt" id="sb-total-cnt">已领取 0 次</div>
           <div style="font-size:9px;color:#f9a8d4;margin-top:2px">💧 <span id="act-currency">0</span> 灵露</div>
           <div style="font-size:9px;padding:2px 8px;border-radius:6px;border:1px solid rgba(249,168,212,.3);color:#f9a8d4;background:rgba(249,168,212,.08);cursor:pointer;margin-top:3px" onclick="openActivityShop();event.stopPropagation()">商店</div>
