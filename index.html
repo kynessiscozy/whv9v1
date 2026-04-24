@@ -1163,7 +1163,7 @@ canvas#C{position:fixed;inset:0;z-index:0;pointer-events:none}
       <div class="pill pow">⚔️ <span id="hud-pow">0</span></div>
       <div class="pill">⚡ <span id="hud-lv">Lv.1</span></div>
       <div class="pill">💫 <span id="hud-sp">1000</span></div>
-      <div class="pill honor" onclick="openAchievements()" title="成就殿堂">🏆 <span id="hud-honor">0</span></div>
+      
     </div>
   </div>
   <div class="exp-row">
@@ -1281,9 +1281,9 @@ canvas#C{position:fixed;inset:0;z-index:0;pointer-events:none}
             <div class="lot-feat" id="lfeat-0" style="border-color:rgba(156,163,175,.18)">
               <div class="lf-ico" style="filter:drop-shadow(0 0 10px rgba(156,163,175,.5))">⭕</div>
               <div class="lf-body">
-                <div class="lf-tag" style="color:#9ca3af">TOP REWARD</div>
-                <div class="lf-nm">十万年魂环</div>
-                <div class="lf-rate">概率 12% · 附带魂骨</div>
+                <div class="lf-tag" style="color:#9ca3af">潮汐状态</div>
+                <div class="lf-nm">低潮</div>
+                <div class="lf-rate">潮汐值越高，稀有概率越高</div>
               </div>
               <div class="lf-badge" style="color:#9ca3af;border-color:rgba(156,163,175,.4);background:rgba(156,163,175,.1)">12%</div>
             </div>
@@ -1308,9 +1308,9 @@ canvas#C{position:fixed;inset:0;z-index:0;pointer-events:none}
             <div class="lot-feat" style="border-color:rgba(167,139,250,.2)">
               <div class="lf-ico" style="filter:drop-shadow(0 0 10px rgba(167,139,250,.6))">💀</div>
               <div class="lf-body">
-                <div class="lf-tag" style="color:#a78bfa">FEATURED</div>
-                <div class="lf-nm">百万年魂环+魂骨</div>
-                <div class="lf-rate">概率 8% · 特殊属性加成</div>
+                <div class="lf-tag" style="color:#a78bfa">潮汐状态</div>
+                <div class="lf-nm">涨潮</div>
+                <div class="lf-rate">潮汐阶段提升高级产出</div>
               </div>
               <div class="lf-badge" style="color:#a78bfa;border-color:rgba(167,139,250,.45);background:rgba(167,139,250,.1)">8%</div>
             </div>
@@ -1335,9 +1335,9 @@ canvas#C{position:fixed;inset:0;z-index:0;pointer-events:none}
             <div class="lot-feat" style="border-color:rgba(245,158,11,.2)">
               <div class="lf-ico" style="filter:drop-shadow(0 0 10px rgba(245,158,11,.6))">⭕</div>
               <div class="lf-body">
-                <div class="lf-tag" style="color:#f59e0b">LEGEND</div>
-                <div class="lf-nm">不可估量魂环</div>
-                <div class="lf-rate">概率 4% · 触发质变魂技</div>
+                <div class="lf-tag" style="color:#f59e0b">潮汐状态</div>
+                <div class="lf-nm">怒潮</div>
+                <div class="lf-rate">怒潮时更易触发顶级奖励</div>
               </div>
               <div class="lf-badge" style="color:#f59e0b;border-color:rgba(245,158,11,.5);background:rgba(245,158,11,.1)">4%</div>
             </div>
@@ -1593,7 +1593,7 @@ canvas#C{position:fixed;inset:0;z-index:0;pointer-events:none}
       <!-- World tabs + shop -->
       <div style="display:flex;align-items:center;gap:6px;margin-bottom:12px;overflow-x:auto" id="world-tab-bar">
         <div onclick="setWorldPage(0)" id="wtab-0" style="flex-shrink:0;padding:5px 14px;border-radius:20px;font-size:11px;font-weight:600;cursor:pointer;border:1.5px solid rgba(192,132,252,.6);background:rgba(192,132,252,.15);color:#c084fc;transition:all .2s">⚔️ 异界副本</div>
-        <div onclick="setWorldPage(1)" id="wtab-1" style="flex-shrink:0;padding:5px 14px;border-radius:20px;font-size:11px;cursor:pointer;border:1px solid var(--bdr);background:transparent;color:var(--dim);transition:all .2s">⚔️ 竞技场</div>
+        <div onclick="setWorldPage(1)" id="wtab-1" style="flex-shrink:0;padding:5px 14px;border-radius:20px;font-size:11px;cursor:pointer;border:1px solid var(--bdr);background:transparent;color:var(--dim);transition:all .2s">⚔️ 异域战场</div>
         <div style="flex:1"></div>
         <div onclick="openAbyssShop()" style="flex-shrink:0;font-size:10px;padding:4px 10px;border-radius:6px;border:1px solid rgba(201,162,39,.4);color:var(--gl);cursor:pointer;background:rgba(201,162,39,.08)">🛒 商店</div>
       </div>
@@ -1616,10 +1616,6 @@ canvas#C{position:fixed;inset:0;z-index:0;pointer-events:none}
   <div class="ni" onclick="navTo('lottery',this)">
     <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(-30 12 12)"/><circle cx="12" cy="12" r="2.8"/><circle cx="19.5" cy="7.5" r=".9" fill="currentColor" stroke="none" opacity=".7"/><circle cx="5" cy="16" r=".6" fill="currentColor" stroke="none" opacity=".5"/></svg></div>
     <div class="lbl">星运</div>
-  </div>
-  <div class="ni" onclick="navTo('tasks',this)">
-    <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="16" rx="1.5"/><path d="M8.5 9h7M8.5 12.5h7M8.5 16h4.5" stroke-width="1.2"/><path d="M5 4c0-1 .7-2 2-2h10c1.3 0 2 1 2 2" stroke-width="1" opacity=".45"/></svg></div>
-    <div class="lbl">任务</div>
   </div>
   <div class="ni" id="ni-abyss" onclick="navTo('abyss',this)">
     <div class="ico" id="abyss-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18" stroke-width="1" opacity=".55"/><path d="M5 7.5Q9 9.5 12 9.5t7-2" stroke-width=".9" opacity=".4"/><path d="M5 16.5Q9 14.5 12 14.5t7 2" stroke-width=".9" opacity=".4"/></svg></div>
@@ -1723,7 +1719,7 @@ canvas#C{position:fixed;inset:0;z-index:0;pointer-events:none}
         <div class="ls-item-ico">⚡</div>
         <div class="ls-item-body">
           <div class="ls-item-name">武魂详情</div>
-          <div class="ls-item-desc">魂技、属性、觉醒等级</div>
+          <div class="ls-item-desc">魂技、觉醒等级</div>
         </div>
       </div>
       <div class="ls-item" onclick="openGrimoire();closeSidebar()">
@@ -1767,15 +1763,7 @@ canvas#C{position:fixed;inset:0;z-index:0;pointer-events:none}
       <div class="ls-divider"></div>
 
       <!-- 成就与收藏 -->
-      <div class="ls-section-title">成就 & 收藏</div>
-      <div class="ls-item" onclick="openAchievements();closeSidebar()">
-        <div class="ls-item-ico">🏆</div>
-        <div class="ls-item-body">
-          <div class="ls-item-name">成就殿堂</div>
-          <div class="ls-item-desc">荣耀值 <span id="ls-honor-v">0</span></div>
-        </div>
-        <div class="ls-item-badge" id="ls-ach-badge">0/28</div>
-      </div>
+      <div class="ls-section-title">收藏</div>
       <div class="ls-item" onclick="sidebarNavBag('title')">
         <div class="ls-item-ico">👑</div>
         <div class="ls-item-body">
@@ -1865,7 +1853,7 @@ canvas#C{position:fixed;inset:0;z-index:0;pointer-events:none}
       <div class="sc-top">斗罗觉醒 · SOUL AWAKENED</div>
       <div class="sc-ico" id="sc-ico">⚡</div>
       <div class="sc-name" id="sc-name">蓝银草</div>
-      <div class="sc-quality" id="sc-quality">传说品质 · LEGEND</div>
+      <div class="sc-quality" id="sc-quality">传说品质 · 潮汐状态</div>
       <div class="sc-line"></div>
       <div class="sc-stats">
         <div class="sc-stat">
@@ -2727,7 +2715,7 @@ function addSoulFragment(quality, count=1){
 function openSoulResonance(){
   if(!G.awakenDone||!G.soul){notify('请先觉醒武魂','normal');return;}
   const rows=Object.entries(RESONANCE_CFG).map(([q,cfg])=>{
-    const frags=G.soulFragments?.[q]||0;
+    const frags=Object.values(G.soulFragments||{}).reduce((a,b)=>a+b,0);
     const lv=Math.min(cfg.maxLevel,Math.floor(frags/cfg.fragPerLevel));
     const pct=lv>=cfg.maxLevel?100:(frags%cfg.fragPerLevel)/cfg.fragPerLevel*100;
     const pw=lv*cfg.powerPerLevel;
@@ -2765,7 +2753,7 @@ function openSoulResonance(){
 function openSoulEvolution(){
   if(!G.awakenDone||!G.soul){notify('请先觉醒武魂','normal');return;}
   const ev=SOUL_EVOLUTIONS[G.soul.name];
-  const frags=G.soulFragments?.[G.soul.quality]||0;
+  const frags=Object.values(G.soulFragments||{}).reduce((a,b)=>a+b,0);
   if(!ev){
     openModal(`<div class="m-title">🌟 武魂传承</div>
       <div class="m-sub" style="color:var(--dim)">当前武魂暂无传承链</div>
@@ -2802,7 +2790,7 @@ function openSoulEvolution(){
 function execSoulEvolution(){
   if(!G.soul)return;
   const ev=SOUL_EVOLUTIONS[G.soul.name];if(!ev)return;
-  const frags=G.soulFragments?.[G.soul.quality]||0;
+  const frags=Object.values(G.soulFragments||{}).reduce((a,b)=>a+b,0);
   if(frags<ev.fragCost||G.level<ev.reqLv){notify('条件不满足','normal');return;}
   G.soulFragments[G.soul.quality]-=ev.fragCost;
   // Find the target soul in SD
@@ -2839,7 +2827,7 @@ const LOT=[
      {w:32,fn:()=>({t:'sp',v:100,l:"100魂力"})},
      {w:22,fn:()=>({t:'ringbone',ti:1,l:"千年魂环+千年魂骨",bone:true})},
      {w:16,fn:()=>({t:'ring',ti:2,l:"万年魂环"})},
-     {w:12,fn:()=>({t:'ringbone',ti:3,l:"十万年魂环+十万年魂骨",bone:true})},
+     {w:12,fn:()=>({t:'ringbone',ti:3,l:"低潮+十万年魂骨",bone:true})},
      {w:8, fn:()=>({t:'herb',grade:'common',l:"随机普通药草"})},
      {w:7, fn:()=>({t:'resource',grade:'common',l:"随机普通资源"})},
      {w:0.5,fn:()=>({t:'artifact',l:"随机神器"})},
@@ -2847,7 +2835,7 @@ const LOT=[
    ],
    detail:[
      {n:"100魂力",p:"32%"},{n:"千年魂环+魂骨",p:"22%"},{n:"万年魂环",p:"16%"},
-     {n:"十万年魂环+魂骨",p:"12%"},{n:"随机普通药草",p:"8%"},{n:"随机普通资源",p:"7%"},
+     {n:"低潮+魂骨",p:"12%"},{n:"随机普通药草",p:"8%"},{n:"随机普通资源",p:"7%"},
      {n:"随机神器",p:"0.5%"},{n:"稀有称号",p:"1%"},
    ]},
   // ── 高级奖池 ──
@@ -2856,7 +2844,7 @@ const LOT=[
      {w:28,fn:()=>({t:'sp',v:250,l:"250魂力"})},
      {w:20,fn:()=>({t:'sp',v:500,l:"500魂力"})},
      {w:16,fn:()=>({t:'ringbone',ti:2,l:"万年魂环+万年魂骨",bone:true})},
-     {w:12,fn:()=>({t:'ring',ti:3,l:"十万年魂环"})},
+     {w:12,fn:()=>({t:'ring',ti:3,l:"低潮"})},
      {w:8, fn:()=>({t:'ringbone',ti:4,l:"百万年魂环+百万年魂骨",bone:true,bonus:true})},
      {w:6, fn:()=>({t:'herb',grade:'rare',l:"随机稀有药草"})},
      {w:5, fn:()=>({t:'resource',grade:'rare',l:"随机稀有资源"})},
@@ -2866,7 +2854,7 @@ const LOT=[
    ],
    detail:[
      {n:"250魂力",p:"28%"},{n:"500魂力",p:"20%"},{n:"万年魂环+魂骨",p:"16%"},
-     {n:"十万年魂环",p:"12%"},{n:"百万年魂环+魂骨",p:"8%"},
+     {n:"低潮",p:"12%"},{n:"涨潮",p:"8%"},
      {n:"随机稀有药草",p:"6%"},{n:"随机稀有资源",p:"5%"},
      {n:"随机神器",p:"1%"},{n:"高级称号(金)",p:"1%"},{n:"欧皇称号",p:"0.001%"},
    ]},
@@ -2875,21 +2863,21 @@ const LOT=[
    pool:[
      {w:22,fn:()=>({t:'sp',v:500,l:"500魂力"})},
      {w:16,fn:()=>({t:'sp',v:1000,l:"1000魂力"})},
-     {w:14,fn:()=>({t:'ringbone',ti:3,l:"十万年魂骨+十万年魂环",bone:true})},
+     {w:14,fn:()=>({t:'ringbone',ti:3,l:"十万年魂骨+低潮",bone:true})},
      {w:10,fn:()=>({t:'ringbone',ti:4,l:"百万年魂环+百万年魂骨",bone:true,bonus:true})},
      {w:1.5,fn:()=>({t:'artifact',l:"随机神器"})},
      {w:6, fn:()=>({t:'herb',grade:'advanced',l:"随机高级药草"})},
      {w:6, fn:()=>({t:'resource',grade:'advanced',l:"随机高级资源"})},
      {w:0.5,fn:()=>({t:'title',pool:'legend',l:"传说称号(红)"})},
-     {w:4, fn:()=>({t:'ring',ti:5,l:"不可估量魂环",bonus:true})},
+     {w:4, fn:()=>({t:'ring',ti:5,l:"怒潮",bonus:true})},
      {w:0.01,fn:()=>({t:'title',pool:'special',ouhuangSpecial:true,l:"欧皇称号(特殊保底)"})},
      {w:0.001,fn:(ten)=>({t:'ring',cosmic:true,l:"宇宙之核(唯一)"+(ten?"[十连]":"")})},
    ],
    detail:[
      {n:"500魂力",p:"22%"},{n:"1000魂力",p:"16%"},{n:"十万年魂骨+魂环",p:"14%"},
-     {n:"百万年魂环+魂骨",p:"10%"},{n:"随机神器",p:"1.5%"},
+     {n:"涨潮",p:"10%"},{n:"随机神器",p:"1.5%"},
      {n:"随机高级药草",p:"6%"},{n:"随机高级资源",p:"6%"},
-     {n:"传说称号(红)",p:"0.5%"},{n:"不可估量魂环",p:"4%"},
+     {n:"传说称号(红)",p:"0.5%"},{n:"怒潮",p:"4%"},
      {n:"欧皇称号",p:"0.01%"},{n:"宇宙之核(唯一)",p:"0.001%"},
    ]},
 ];
@@ -3233,6 +3221,10 @@ function notify(msg,type='normal'){
 
 // ──── NAVIGATION ────
 let _bagOpen=false;
+function setBagFabIcon(open=false){
+  const fab=$('bag-fab');if(!fab)return;
+  fab.innerHTML=open?'✕':'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;display:block;"><path d="M6 9V7.5A5.5 5.5 0 0117 7.5V9"/><path d="M3.5 9h17L19 20.5H5L3.5 9z"/><path d="M9.5 13.5h5" stroke-width="1.2" opacity=".6"/></svg>';
+}
 function toggleBagFab(){
   _bagOpen=!_bagOpen;
   const fab=$('bag-fab');
@@ -3252,13 +3244,35 @@ function toggleBagFab(){
     curBagFilter='all';
     renderBagOv();
     if(fab)fab.classList.add('open');
-    if(fab)fab.textContent='✕';
+    setBagFabIcon(true);
   }else{
     const bagOv=$('bag-overlay');
     if(bagOv)bagOv.style.display='none';
     if(fab)fab.classList.remove('open');
-    if(fab)fab.textContent='🎒';
+    setBagFabIcon(false);
   }
+}
+
+let _bagDrag={on:false,sx:0,sy:0,l:0,t:0,moved:false};
+function initBagFabDrag(){
+  const fab=$('bag-fab');if(!fab)return;
+  fab.addEventListener('pointerdown',e=>{
+    _bagDrag.on=true;_bagDrag.moved=false;
+    const r=fab.getBoundingClientRect();
+    _bagDrag.sx=e.clientX;_bagDrag.sy=e.clientY;_bagDrag.l=r.left;_bagDrag.t=r.top;
+    fab.setPointerCapture(e.pointerId);
+  });
+  fab.addEventListener('pointermove',e=>{
+    if(!_bagDrag.on)return;
+    const dx=e.clientX-_bagDrag.sx,dy=e.clientY-_bagDrag.sy;
+    if(Math.abs(dx)+Math.abs(dy)>6)_bagDrag.moved=true;
+    const maxL=window.innerWidth-fab.offsetWidth,maxT=window.innerHeight-fab.offsetHeight-8;
+    const nl=Math.min(maxL,Math.max(0,_bagDrag.l+dx));
+    const nt=Math.min(maxT,Math.max(50,_bagDrag.t+dy));
+    fab.style.left=nl+'px';fab.style.top=nt+'px';fab.style.right='auto';fab.style.bottom='auto';
+  });
+  fab.addEventListener('pointerup',e=>{_bagDrag.on=false;if(_bagDrag.moved)e.preventDefault();});
+  fab.addEventListener('click',e=>{if(_bagDrag.moved){e.preventDefault();e.stopPropagation();_bagDrag.moved=false;}});
 }
 function fBagOv(f,el){
   curBagFilter=f;
@@ -3284,6 +3298,30 @@ function navTo(page,el){
   else{stopLotGeo();hideSoulGeo();stopCwGeo();stopSbGeo();}
 }
 
+
+function mergeTaskModulesIntoHunt(){
+  const hunt=$('page-hunt');const task=$('page-tasks');
+  if(!hunt||!task||hunt.dataset.merged==='1')return;
+  const cult=task.querySelector('.cult-widget');
+  const seasonal=task.querySelector('.sb-banner');
+  if(cult){
+    const wrap=document.createElement('div');
+    wrap.className='card';
+    wrap.style.padding='10px';
+    wrap.innerHTML='<div class="st" style="margin-bottom:8px">魂力修炼（精简）</div><div style="font-size:10px;color:var(--dim)"><span style="color:#6ee7b7">+2/秒 挂机</span> · <span style="color:#93c5fd">+100/分 在线</span></div>';
+    hunt.insertBefore(wrap,hunt.children[1]);
+  }
+  if(seasonal){
+    const box=document.createElement('div');
+    box.className='card';
+    box.style.padding='10px';
+    box.style.marginBottom='10px';
+    box.innerHTML='<div class="st" style="margin-bottom:6px">限时活动</div><div style="font-size:10px;color:var(--dim)">活动入口已并入试炼页顶部</div>';
+    hunt.insertBefore(box,hunt.children[1]);
+  }
+  task.style.display='none';
+  hunt.dataset.merged='1';
+}
 // ══════════════════════════════════════════════════
 //  AWAKENING
 // ══════════════════════════════════════════════════
@@ -3416,8 +3454,8 @@ function renderSoulPage(){
   // Ring arc HTML
   const RING_COLS=['#a78bfa','#a78bfa','#60a5fa','#34d399','#fbbf24','#f87171','#e879f9','#fffbeb','#00ffff','#ffd700'];
   const arcPositions=[
-    {l:0,b:0},{l:32,b:16},{l:64,b:30},{l:97,b:40},{l:130,b:44},
-    {l:163,b:40},{l:195,b:30},{l:226,b:16},{l:256,b:4},{l:285,b:0}
+    {l:0,b:8},{l:32,b:8},{l:64,b:8},{l:96,b:8},{l:128,b:8},
+    {l:160,b:8},{l:192,b:8},{l:224,b:8},{l:256,b:8},{l:288,b:8}
   ];
   const ringArcH=Array(10).fill(0).map((_,i)=>{
     const r=s.rings[i];
@@ -3546,7 +3584,7 @@ function renderSoulPage(){
         ${G.awakenLevel>0?('<div onclick="openAwakenLevel()" style="display:inline-flex;align-items:center;gap:4px;padding:2px 9px;border-radius:10px;background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.28);font-size:9px;font-weight:700;color:#c4b5fd;cursor:pointer">✦ 觉醒 Lv.'+G.awakenLevel+'</div>'):''}
         ${(()=>{const t=TALENTS.find(x=>x.id===G.talent);if(!t)return '';return '<div onclick="openTalentSelect()" style="font-size:9px;padding:2px 9px;border-radius:10px;background:'+t.bgc+';border:1px solid '+t.col+'55;color:'+t.col+';cursor:pointer">'+t.icon+' '+t.name+'</div>';})()}
       </div>
-      <div class="sol-attrs">${s.attrs.map(a=>`<div class="sol-attr">${a}</div>`).join('')}</div>
+      
       <!-- v9: Unified 4-action row — width matches ring card (padding 0 11px) -->
       <div class="sol-actions" style="margin-bottom:10px">
         <div class="sol-act" onclick="doSecondAwaken()">
@@ -3611,19 +3649,13 @@ function renderSoulPage(){
     </div>
 
     <div class="sv2-bottom-row">
-      <div class="sv2-grimoire-btn" onclick="openGrimoire()">
-        <span class="gb-ico">📖</span>武魂图鉴
+      <div class="sv2-grimoire-btn" onclick="openTitleSelect()">
+        <span class="gb-ico">👑</span>称号/封号天赋
       </div>
-      <div class="sv2-grimoire-btn" onclick="openAchievements()" style="border-color:rgba(255,215,0,.28);background:rgba(255,215,0,.06);color:#fde68a">
-        <span class="gb-ico">🏆</span>成就殿堂
-      </div>
+      ${(G.awakenLevel>0||(G.soulFragments&&Object.values(G.soulFragments).some(v=>v>0)))?('<div class="sv2-grimoire-btn" onclick="openAwakenLevel()" style="border-color:rgba(139,92,246,.28);background:rgba(139,92,246,.07);color:#c4b5fd"><span class="gb-ico">✦</span>觉醒 Lv.'+(G.awakenLevel||0)+'</div>'):''}
     </div>
     <div class="sv2-bottom-row" style="margin-top:0">
-      ${(()=>{if(G.level<91)return '';const t=TALENTS.find(x=>x.id===G.talent);const col=t?t.col:'#f87171';const bgc=t?t.bgc:'rgba(239,68,68,.04)';const ico=t?t.icon:'⚔️';const nm=G.talent?('封号·'+(t?t.name:'')):'封号天赋';return '<div class="sv2-grimoire-btn" onclick="openTalentSelect()" style="border-color:'+col+'50;background:'+bgc+';color:'+col+'"><span class="gb-ico">'+ico+'</span>'+nm+'</div>';})()}
-      ${(G.awakenLevel>0||(G.soulFragments&&Object.values(G.soulFragments).some(v=>v>0)))?('<div class="sv2-grimoire-btn" onclick="openAwakenLevel()" style="border-color:rgba(139,92,246,.28);background:rgba(139,92,246,.07);color:#c4b5fd"><span class="gb-ico">✦</span>觉醒 Lv.'+(G.awakenLevel||0)+'</div>'):''}
-      <div class="sv2-reawaken-btn" onclick="confirmReset()">
-        🔄 再次觉醒
-      </div>
+      <div class="sv2-reawaken-btn" onclick="confirmReset()">🔄 再次觉醒</div>
     </div>
     <div style="height:6px;position:relative;z-index:1"></div>
   `;
@@ -3968,8 +4000,8 @@ function assignRingFromSel(rid){
   // Check unlimited ring special
   if(it.data.n==='不可估量'&&t.mutateSkills){
     const msk=pick(t.mutateSkills);
-    G.soul.skills.push({name:msk,desc:'不可估量魂环触发的质变魂技！效果超越常规！',params:['质变效果×3','无视部分规则'],ring:G.soul.rings.length});
-    notify(`🌀 不可估量魂环触发质变魂技：${msk}！`,'divine');spawnBurst('#e879f9',80);
+    G.soul.skills.push({name:msk,desc:'怒潮触发的质变魂技！效果超越常规！',params:['质变效果×3','无视部分规则'],ring:G.soul.rings.length});
+    notify(`🌀 怒潮触发质变魂技：${msk}！`,'divine');spawnBurst('#e879f9',80);
   }
   if(mut)notify('✨ 魂技质变觉醒！','legend');
 
@@ -4354,17 +4386,6 @@ function renderLotDrawGrid(idx){
     ?`<div class="ldg-tix-action" style="color:${col}">点击使用券抽 →</div>`
     :'';
 
-  // Five-draw button (5x)
-  const s5HasTix=sc>=5;
-  const s5Ico=s5HasTix?'🎟️':'🎯';
-  const s5Lbl='五连抽取';
-  const s5Cost=`× ${cfg.cost*5} 魂力`;
-  const s5TixHtml=s5HasTix
-    ?`<div class="ldg-tix-badge" style="border-color:${col}50;color:${col}">券 ×5</div>`
-    :(sc>0?`<div class="ldg-tix-badge" style="border-color:rgba(255,255,255,.15);color:var(--dim)">券 ${sc}/5</div>`:'');
-  const s5Action=s5HasTix
-    ?`<div class="ldg-tix-action" style="color:${col}">点击使用5张券 →</div>`
-    :'';
 
   // Ten-pull ticket note
   const tenNote=tc>0
@@ -4387,15 +4408,7 @@ function renderLotDrawGrid(idx){
       <div class="ldg-cost" id="lc1">${s1Cost}</div>
       ${s1Action}
     </div>
-    <div class="lot-dg-btn${s5HasTix?' has-tix':''}" style="--lpc-r:${r};--lpc-g:${g};--lpc-b:${b}" onclick="doLotSmart(5)">
-      <div class="ldg-top">
-        <div class="ldg-ico">${s5Ico}</div>
-        ${s5TixHtml}
-      </div>
-      <div class="ldg-lbl">${s5Lbl}</div>
-      <div class="ldg-cost" id="lc5">${s5Cost}</div>
-      ${s5Action}
-    </div>
+
   `;
 }
 
@@ -4406,17 +4419,6 @@ function doLotSmart(times){
   if(times===1){
     const s=G.bag.find(i=>i.type==='ticket'&&i.data?.pool===pool&&!i.data?.ten);
     if(s&&s.count>0){doLotWithTicketSingle(pool);renderLotDrawGrid(_lotCurPool);return;}
-  } else if(times===5){
-    const singles=G.bag.filter(i=>i.type==='ticket'&&i.data?.pool===pool&&!i.data?.ten);
-    const sc=singles.reduce((s,i)=>s+i.count,0);
-    if(sc>=5){
-      // consume 5 single tickets
-      let rem=5;
-      for(const it of singles){if(rem<=0)break;const u=Math.min(rem,it.count);it.count-=u;rem-=u;}
-      G.bag=G.bag.filter(i=>!(i.type==='ticket'&&i.count<=0));
-      doLotInternal(cfg,_lotCurPool,5,true);
-      renderLotDrawGrid(_lotCurPool);return;
-    }
   } else if(times===10){
     // Ten: prefer ten-pull ticket, then 10 singles, then SP
     const tenT=G.bag.find(i=>i.type==='ticket'&&i.data?.pool===pool&&i.data?.ten);
@@ -4641,7 +4643,7 @@ function rollLot(cfg,isTen){
       // Guaranteed: artifact / unlimited ring / cosmic (1/3 each)
       const r3=Math.random();
       if(r3<0.333)return{t:'artifact',self:true,l:'自选神器(欧皇保底)'};
-      if(r3<0.666)return{t:'ring',ti:5,l:'不可估量魂环(欧皇保底)',bonus:true};
+      if(r3<0.666)return{t:'ring',ti:5,l:'怒潮(欧皇保底)',bonus:true};
       return{t:'ring',cosmic:true,l:'宇宙之核(欧皇保底)'};
     }
     const topItem=cfg.pool[cfg.pool.length-2]||cfg.pool[cfg.pool.length-1];
@@ -5197,12 +5199,10 @@ const HIDDEN_TASK_TPL=[
   {n:"💎 神骨降临",d:"在特殊道路中获得神骨",g:1,r:10000,t:"godbone",i:"💎",ticket:'apex',ticketN:2,hidden:true},
 ];
 function genTasks(){
-  // 4 normal tasks + 1 random hidden task
+  // 仅生成日常任务（已移除隐藏任务）
   const sh=[...TASK_TPL].sort(()=>Math.random()-.5);
-  const hidden=[...HIDDEN_TASK_TPL].sort(()=>Math.random()-.5);
   G.tasks=[
     ...sh.slice(0,4).map(t=>({...t,prog:0,claimed:false,id:Date.now()+Math.random()})),
-    {...hidden[0],prog:0,claimed:false,id:Date.now()+Math.random()},
   ];
   G.taskRT=Date.now();G.refreshCount=0;saveG();
 }
@@ -5309,7 +5309,7 @@ function cultivate(){
   addExp(45);progressTask('cultivate');progressTask('earn',200);
   grantActivityDew('cultivate');
   if(Math.random()<0.025){addSP(1000,'修炼奇遇×5');notify('✨ 修炼奇遇！5倍魂力！','legend');}
-  if(Math.random()<0.06)unlockHiddenTask();
+
   updateCultUI();saveG();
 }
 function explore(){
@@ -5324,28 +5324,8 @@ function explore(){
   if(Math.random()<0.12){const r=RESOURCES[ri(0,5)];addResourceToBag(r);notify(`📦 发现资源：${r.n}！`,'normal');progressTask('resource');}
   updateCultUI();saveG();renderBag();
 }
-function unlockHiddenTask(){
-  const hts=[
-    {n:"秘境挑战",d:"探索神秘副本",r:5000,i:"🎯"},{n:"混沌试炼",d:"进入混沌狩猎",r:3000,i:"🌀"},
-    {n:"神级追溯",d:"神级武魂二次觉醒",r:8000,i:"👑"},{n:"古器发掘",d:"狩猎中获取神器",r:4000,i:"⚔️"},
-  ];
-  const t=pick(hts);
-  const c=$('hidden-tasks');
-  if(c)c.innerHTML=`<div class="tc hidden">
-    <div class="tc-main">
-      <div class="tc-ico-w">${t.i}</div>
-      <div class="tc-body"><div class="tc-name">${t.n}</div><div class="tc-desc">${t.d}</div></div>
-      <div class="tc-right"><div class="tc-rew">+${t.r}</div><div class="tc-btn do" onclick="claimHidden(${t.r})">挑战</div></div>
-    </div>
-  </div>`;
-  notify('🔮 隐藏任务解锁！','epic');
-}
-function claimHidden(r){
-  addSP(r,'隐藏任务');addExp(r/4);
-  const c=$('hidden-tasks');
-  if(c)c.innerHTML='<div class="empty-st"><div class="ei">🎯</div><div class="em">任务完成！</div></div>';
-  notify(`👑 隐藏任务！+${r} 魂力！`,'legend');saveG();
-}
+function unlockHiddenTask(){}
+function claimHidden(){}
 
 // ══════════════════════════════════════════════════
 //  BAG
@@ -6122,6 +6102,16 @@ const ABYSS_LAYERS=[
   {id:4,n:"神魔禁地",col:"#ef4444",req:90,stages:[{id:"4-1",n:"神魔领域",type:"normal",cost:2,enemy:{n:"堕落神使",i:"😈",hp:135000,atk:13000,spd:18,skills:[{n:"神魔之力",d:"毁灭性攻击",dmg:13000,cd:3,icon:"💀"},{n:"神圣燃烧",d:"神圣火焰灼烧",dmg:1500,cd:2,status:"burn",icon:"🔥"}]}}]},
   {id:5,n:"宇宙本源",col:"#00ffff",req:100,stages:[{id:"5-1",n:"宇宙起点",type:"normal",cost:3,enemy:{n:"宇宙意志化身",i:"∞",hp:450000,atk:32500,spd:25,skills:[{n:"宇宙湮灭",d:"近乎毁灭的攻击",dmg:41600,cd:4,icon:"💥"},{n:"规则重写",d:"无视一切防御",dmg:5000,cd:3,icon:"⚡"}]}}]},
 ];
+
+
+(function boostAbyssDifficulty(){
+  ABYSS_LAYERS.forEach(layer=>layer.stages.forEach(st=>{
+    const mul=st.type==='boss'?12:st.type==='elite'?8:6;
+    st.enemy.hp=Math.floor(st.enemy.hp*mul);
+    st.enemy.atk=Math.floor(st.enemy.atk*mul);
+    if(st.enemy.skills)st.enemy.skills.forEach(sk=>{if(sk.dmg)sk.dmg=Math.floor(sk.dmg*mul);});
+  }));
+})();
 
 const ABYSS_SHOP=[
   // Token purchase (dual currency)
@@ -7222,6 +7212,8 @@ if(!G.activity)G.activity={id:'springFestival',name:'踏春欧皇',active:true,s
 checkContentUnlocks();
 
 updateHUD();updateExpBar();
+initBagFabDrag();
+mergeTaskModulesIntoHunt();
 if(!G.tasks.length)genTasks();
 renderSoulPage();renderLotPage();
 updateActivityHUD();
@@ -7252,7 +7244,7 @@ function openAwakenLevel(){
   if(!G.soul){notify('请先觉醒武魂','normal');return;}
   const lv=G.awakenLevel||0;
   const qc=QC[G.soul.quality]||QC.common;
-  const frags=(G.soulFragments||{})[G.soul.quality]||0;
+  const frags=Object.values(G.soulFragments||{}).reduce((a,b)=>a+b,0);
   const nextCost=lv<10?AWK_FRAG_COSTS[lv+1]:null;
   const canUp=nextCost&&frags>=nextCost;
   const starsH=Array(10).fill(0).map((_,i)=>`<div class="awk-star ${i<lv?'lit':''}"></div>`).join('');
@@ -7277,8 +7269,8 @@ function doAwakenUp(){
   if(!G.soul)return;
   const lv=G.awakenLevel||0;if(lv>=10){notify('已满级','normal');return;}
   const cost=AWK_FRAG_COSTS[lv+1];
-  if(((G.soulFragments||{})[G.soul.quality]||0)<cost){notify('碎片不足','normal');return;}
-  G.soulFragments[G.soul.quality]-=cost;
+  if(Object.values(G.soulFragments||{}).reduce((a,b)=>a+b,0)<cost){notify('碎片不足','normal');return;}
+  let remain=cost;for(const k of Object.keys(G.soulFragments||{})){if(remain<=0)break;const v=G.soulFragments[k]||0;const use=Math.min(v,remain);G.soulFragments[k]=v-use;remain-=use;}
   G.awakenLevel=(lv+1);
   notify(`✦ 武魂觉醒 Lv.${G.awakenLevel}！${AWK_FX[G.awakenLevel]}`,'divine');
   spawnBurst(QC[G.soul.quality]?.c||'#a78bfa',70);
@@ -7504,7 +7496,7 @@ function startArenaMatch(enemyName){
     skills:[{n:'竞技连击',d:'',dmg:Math.floor(e.atk*1.7),cd:3,curCd:0,icon:'⚡'}]};
   combatState={player,enemy:enemyObj,round:1,maxRounds:8,
     stage:{n:e.n,type:'elite',cost:0,enemy:enemyObj},
-    layer:{n:'竞技场',col:'#ef4444'},
+    layer:{n:'异域战场',col:'#ef4444'},
     turnOrder:[],log:[],phase:0,ended:false,speed:'normal',
     isArena:true,arenaEnemy:e};
   combatLog=[];showCombatUI();
@@ -7516,17 +7508,17 @@ function handleArenaResult(won){
     const honor=Math.max(1,Math.ceil(e.pw/1000));
     G.arenaHonor=(G.arenaHonor||0)+honor;
     G.arenaWins=(G.arenaWins||0)+1;
-    addLog('\n> 🏆 竞技场胜利！荣耀+'+honor+' · 当前: '+G.arenaHonor,'#22c55e');
+    addLog('\n> 🏆 异域战场胜利！荣耀+'+honor+' · 当前: '+G.arenaHonor,'#22c55e');
     // Check milestone notifications
     ARENA_MILESTONES.forEach(m=>{
       if(G.arenaHonor>=m.honor&&!G.achievements?.['arena_ms_'+m.honor])
-        setTimeout(()=>notify('🎁 竞技里程碑：'+m.n+'！荣耀'+m.honor+'，前往竞技场领取奖励！','legend'),400);
+        setTimeout(()=>notify('🎁 竞技里程碑：'+m.n+'！荣耀'+m.honor+'，前往异域战场领取奖励！','legend'),400);
     });
     if((G.arenaWins||0)>=10)checkAchievement('arena10');
   } else {
     G.arenaLosses=(G.arenaLosses||0)+1;
     G.arenaHonor=(G.arenaHonor||0)+5;
-    addLog('\n> 💔 竞技场落败… 荣耀+5 · 经验+300','#f87171');
+    addLog('\n> 💔 异域战场落败… 荣耀+5 · 经验+300','#f87171');
     addExp(300);
   }
   saveG();
